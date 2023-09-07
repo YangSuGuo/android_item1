@@ -11,11 +11,11 @@
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="400dp" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintVertical_bias="0.52"/>
+            app:layout_constraintVertical_bias="0.525"/>
     <EditText
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:drawableStart="@drawable/login_user"
+            android:drawableStart="@drawable/login_user01"
             android:drawablePadding="10dp"
             android:inputType="text"
             android:textSize="17dp"
@@ -44,17 +44,18 @@
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/userName" android:layout_marginTop="20dp"/>
     <Button
-            android:background="@drawable/logintrue"
-            android:layout_width="80dp"
-            android:layout_height="80dp" android:id="@+id/button2"
-            android:layout_marginTop="40dp"
+            android:background="@drawable/button_yes"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="60dp"
+            android:layout_height="60dp" android:id="@+id/button2"
+            android:layout_marginTop="80dp"
             app:layout_constraintTop_toBottomOf="@+id/passWord"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="70dp"/>
     <Button
-            android:background="@drawable/remember"
-            android:onClick="saved"
-            android:layout_width="75dp"
-            android:layout_height="75dp" android:id="@+id/button3"
-            app:layout_constraintTop_toBottomOf="@+id/passWord" android:layout_marginTop="40dp"
+            android:background="@drawable/button_register"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="60dp"
+            android:layout_height="60dp" android:id="@+id/button3"
+            app:layout_constraintTop_toBottomOf="@+id/passWord" android:layout_marginTop="80dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="70dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
