@@ -4,12 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import org.jetbrains.annotations.NotNull;
 
 @Entity(tableName = "userinfo")
 public class user {
     @PrimaryKey(autoGenerate = true)
-    private  int id;
+    private int id;
 
     @ColumnInfo(name = "user")
     @NonNull
@@ -30,23 +29,23 @@ public class user {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @NonNull
     public String getUser() {
         return user;
+    }
+    //set
+
+    public void setUser(@NonNull String user) {
+        this.user = user;
     }
 
     @NonNull
     public String getPass() {
         return pass;
-    }
-    //set
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setUser(@NonNull String user) {
-        this.user = user;
     }
 
     public void setPass(@NonNull String pass) {

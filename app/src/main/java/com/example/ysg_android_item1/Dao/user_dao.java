@@ -11,8 +11,10 @@ import java.util.List;
 public interface user_dao {
     @Insert
     void enroll(user... users);
+
     @Query("SELECT * FROM userinfo")
     List<user> getALL();
+
     @Query("SELECT * FROM userinfo WHERE user = :user AND password = :pass")
     List<user> login(String user, String pass);
 }
