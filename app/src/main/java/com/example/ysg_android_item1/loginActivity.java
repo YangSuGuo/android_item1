@@ -3,18 +3,24 @@ package com.example.ysg_android_item1;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.ysg_android_item1.Entity.user;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class loginActivity extends AppCompatActivity {
+    Map<String, String> Userinfo = new HashMap<>();
+    private EditText user, pass;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        user = findViewById(R.id.userName);
+        pass = findViewById(R.id.passWord);
 
         // 状态栏沉浸
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -23,15 +29,26 @@ public class loginActivity extends AppCompatActivity {
             );
         }
 
-        List<user> user = new ArrayList<>();
-        user.add(new user(1, "ysg",  "5409"));
-
         // 监听点击
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(loginActivity.this,"点击",Toast.LENGTH_SHORT).show();
+                Userinfo.put(user.getText().toString().trim(), pass.getText().toString().trim());
+
+                Toast.makeText(loginActivity.this, "登录", Toast.LENGTH_SHORT).show();
             }
+
+            ;
+        });
+        findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Userinfo.put(user.getText().toString().trim(), pass.getText().toString().trim());
+
+                Toast.makeText(loginActivity.this, "登录", Toast.LENGTH_SHORT).show();
+            }
+
+            ;
         });
     }
 }

@@ -3,17 +3,17 @@ package com.example.ysg_android_item1;
 import android.app.Application;
 import android.content.Context;
 import androidx.room.Room;
-import com.example.ysg_android_item1.Database.user_database;
+import com.example.ysg_android_item1.Database.User_Database;
 
 public class MyappDB extends Application {
     private static Context context;
-    private static user_database db;
+    private static User_Database db;
 
     public static Context getContext() {
         return context;
     }
 
-    public static user_database getDb() {
+    public static User_Database getDb() {
         return db;
     }
 
@@ -21,7 +21,7 @@ public class MyappDB extends Application {
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
-        db = Room.databaseBuilder(context, user_database.class, "item1")
+        db = Room.databaseBuilder(context, User_Database.class, "item1")
                 .build();
     }
 }

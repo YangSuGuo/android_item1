@@ -3,4 +3,5 @@
      <tree path="/app/src/main/res/drawable" title="图片"/>
      <tree path="/app/src/main/res/layout" title="布局"/>
      <tree path="/app/src/main/java/com/example/ysg_android_item1/loginActivity.java" title="登录界面"/>
+     <tree path="/app/src/main/java/com/example/ysg_android_item1/Database/user_database.java"/>
  </trees>
